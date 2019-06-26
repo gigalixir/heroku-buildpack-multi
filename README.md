@@ -1,3 +1,6 @@
+Forked from https://github.com/heroku/heroku-buildpack-multi
+Main modification is to allow nested heroku-buildpack-multi inside of a heroku-buildpack-multi
+
 # Heroku buildpack: multi
 
 This buildpack is no longer actively maintained. The associated functionality exists natively on the Heroku platform. Please refer to https://devcenter.heroku.com/articles/buildpacks and https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app for documentation.
