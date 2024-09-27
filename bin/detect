@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 
 if [ -f $1/.buildpacks ]; then
-  echo "Multipack"
-  exit 0
+  if [ "$(wc -w $1/.buildpacks | awk {'print $1'})" -ne "0" ]; then
+    echo ".buildpacks file detected"
+    exit 0
+  else
+    echo ".buildpacks file is empty"
+    exit 1
+  fi
 else
   echo "no .buildpacks file"
   exit 1
